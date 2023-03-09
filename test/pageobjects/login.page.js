@@ -10,9 +10,9 @@ class LoginPage extends Page {
 
     async login (username, password) {
         await super.open();
-        await $(this.inputUsername).setValue(username);
-        await $(this.inputPassword).setValue(password);
-        await $(this.submitButton).click();
+        await this.inputUsername.setValue(username);
+        await this.inputPassword.setValue(password);
+        await this.submitButton.click();
     }
 }
 

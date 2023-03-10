@@ -20,6 +20,7 @@
   "dependencies": {
     "@wdio/cli": "^8.5.7",
     "allure-commandline": "^2.21.0",
+    "lint": "^0.8.19",
     "selenium-webdriver": "^4.8.1",
     "wdio-intercept-service": "^4.4.0",
     "webdriver-image-comparison": "^1.0.2",

@@ -7,5 +7,7 @@ describe('Add and remove items from inventory', () => {
     it('Add every item from the catalogue to the cart', async () => {
         await LoginPage.login(loginData.username, loginData.password)
         await InventoryPage.checkInventoryListIsDisplayed()
+        await InventoryPage.checkCartAfterAddingOrRemovingItems('Add to cart')
+        await InventoryPage.checkCartAfterAddingOrRemovingItems('Remove')
     })
 })

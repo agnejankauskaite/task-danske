@@ -4,9 +4,12 @@ import WebdriverAjax from 'wdio-intercept-service'
 import Page from './page';
 
 class InventoryPage extends Page {
-    get inventoryTable () { return $('#inventory_container'); }
-    get firstInventoryImage () { return $('.inventory_item_img'); }
+    get inventoryTable () { return $('#inventory_container') }
+    get firstInventoryImage () { return $('.inventory_item_img') }
     get shoppingCartIcon () { return $('.shopping_cart_link') }
+    get itemName () { return $('.inventory_item_name') }
+    get itemDescription () { return $('.inventory_item_desc') }
+    get itemPrice () { return $('.inventory_item_price') }
 
     async checkInventoryListIsDisplayed () {
         await expect(this.inventoryTable).toBeDisplayed()
@@ -35,6 +38,12 @@ class InventoryPage extends Page {
                 }
             });
         })
+    }
+
+    async checkItemData (name, description, price) {
+            expect(this.itemName).toHaveText(name)
+            expect(this.itemDescription).toHaveText(description)
+            expect(this.itemPrice).toHaveText(price)
     }
 }
 

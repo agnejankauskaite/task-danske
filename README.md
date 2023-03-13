@@ -7,7 +7,7 @@
 * Open this project's root folder
 * Run `npm ci` to install the dependencies from package-lock.json file
 * Run `npm init wdio .`
-* Run `npm run wdio` to run the test suite
+* To run the test suite, use `npm run wdio` command
 * To generate allure-report folder, run `allure generate allure-results --clean -o allure-report `
 * If you want to display the results in your browser, run `allure open`
 

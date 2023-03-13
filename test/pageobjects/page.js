@@ -1,6 +1,3 @@
-import { ChainablePromiseElement } from 'webdriverio';
-import WebdriverAjax from 'wdio-intercept-service'
-
 export default class Page {
     get errorMessage () { return $('[class="error-message-container error"]') }
 

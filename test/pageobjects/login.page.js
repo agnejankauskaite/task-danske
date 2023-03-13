@@ -1,6 +1,3 @@
-import { ChainablePromiseElement } from 'webdriverio';
-import WebdriverAjax from 'wdio-intercept-service'
-
 import Page from './page';
 
 class LoginPage extends Page {

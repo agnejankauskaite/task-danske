@@ -1,7 +1,7 @@
-# Test automation assignment
+## Test automation assignment
 
 
-## Instructions
+### Instructions
 
 ```
 * Clone this project to your local machine

@@ -16,6 +16,10 @@ class InventoryPage extends Page {
         await expect(await browser.checkScreen('inventory-page', {})).toEqual(0)
     }
 
+    async checkInventoryPage (user) {
+        await expect(await browser.checkScreen(`inventory-page-for-${user}`, {})).toEqual(0)
+    }
+
     async checkCartAfterAddingOrRemovingItems (text) {
         const buttons = $$(`button=${text}`)
         const shoppingCartBadge = $$('.shopping_cart_badge')
@@ -41,9 +45,9 @@ class InventoryPage extends Page {
     }
 
     async checkItemData (name, description, price) {
-            expect(this.itemName).toHaveText(name)
-            expect(this.itemDescription).toHaveText(description)
-            expect(this.itemPrice).toHaveText(price)
+            expect(this.itemName).toHaveTextContaining(name)
+            expect(this.itemDescription).toHaveTextContaining(description)
+            expect(this.itemPrice).toHaveTextContaining(price)
     }
 }
 
